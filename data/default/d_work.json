@@ -1,0 +1,68 @@
+[
+  {
+    "_id": {
+      "$oid": "5f6ea46800bdd418e4d1b167"
+    },
+    "_class": "work",
+    "_creator": {
+      "$oid": "5f56e1ee9bce881d94a560d1"
+    },
+    "author": {
+      "$oid": "5f6e9cad7f906a10a8f45e18"
+    },
+    "task": {
+      "$oid": "5f6e9f6d00bdd418e4d1b153"
+    },
+    "duration": 90,
+    "description": "Quis Morbi tincidunt Cum nonummy laoreet cursus",
+    "_createdAt": {
+      "$date": "2020-09-26T02:16:08.500Z"
+    },
+    "_editor": {
+      "$oid": "5f56e1ee9bce881d94a560d1"
+    },
+    "_updatedAt": {
+      "$date": "2020-09-26T23:29:38.715Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f6fd1bd9cc6770df048849d"
+    },
+    "_class": "work",
+    "_creator": {
+      "$oid": "5f56d7618ac98f19c85ac538"
+    },
+    "author": {
+      "$oid": "5f6e9c5a7f906a10a8f45e17"
+    },
+    "task": {
+      "$oid": "5f6fd1169cc6770df048849a"
+    },
+    "duration": 60,
+    "description": "Cursus Donec cursus Nam ornare enim sagittis Quisque pellentesque nec vitae",
+    "_createdAt": {
+      "$date": "2020-09-26T23:41:49.359Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f6fd2189cc6770df04884a0"
+    },
+    "_class": "work",
+    "_creator": {
+      "$oid": "5f56d7618ac98f19c85ac538"
+    },
+    "author": {
+      "$oid": "5f6e9c5a7f906a10a8f45e17"
+    },
+    "task": {
+      "$oid": "5f6e9f6d00bdd418e4d1b153"
+    },
+    "duration": 30,
+    "description": "Sed ornare Sed egestas dui quis odio libero risus pretium ligula",
+    "_createdAt": {
+      "$date": "2020-09-26T23:43:20.423Z"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "label": "Список в задаче",
+  "description": "Список комментариев в задаче",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "author",
+      "orderNumber": 20
+    },
+    {
+      "name": "text",
+      "orderNumber": 30
+    }
+  ]
+}

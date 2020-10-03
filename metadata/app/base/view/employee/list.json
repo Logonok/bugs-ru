@@ -1,0 +1,15 @@
+{
+  "label": "Список сотрудников",
+  "description": "Представление по умолчанию сотрудника в списке",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "user",
+      "orderNumber": 20
+    }
+  ]
+}

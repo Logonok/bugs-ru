@@ -1,0 +1,65 @@
+{
+  "label": "Главная  секция",
+  "description": "Главная секция бокового меню",
+  "nodes": [
+    {
+      "name": "assignedToMe",
+      "label": "Назначенные мне задачи",
+      "description": "Список назначенных мне задач",
+      "orderNumber": 10,
+      "class": "task",
+      "view": "listAssigned"
+    },
+    {
+      "name": "createdByMe",
+      "label": "Созданные мною задачи",
+      "description": "Список созданных мною задач",
+      "orderNumber": 20,
+      "class": "task",
+      "view": "listCreated"
+    },
+    {
+      "name": "myEmployee",
+      "label": "Мой сотрудник",
+      "description": "Сотрудник, привязанный к системному пользователю",
+      "orderNumber": 30,
+      "class": "employee",
+      "view": "listMy"
+    },
+    {
+      "name": "newTasks",
+      "label": "Новые задачи",
+      "description": "Список новых задач",
+      "orderNumber": 40,
+      "class": "task",
+      "view": "listNew",
+      "options": {
+        "separatorBefore": true
+      }
+    },
+    {
+      "name": "tasks",
+      "label": "Задачи",
+      "description": "Список всех задач",
+      "orderNumber": 50,
+      "class": "task"
+    },
+    {
+      "name": "projects",
+      "label": "Проекты",
+      "description": "Список проектов",
+      "orderNumber": 60,
+      "class": "project",
+      "options": {
+        "separatorBefore": true
+      }
+    },
+    {
+      "name": "employees",
+      "label": "Сотрудники",
+      "description": "Список всех сотрудников",
+      "orderNumber": 70,
+      "class": "employee"
+    }
+  ]
+}

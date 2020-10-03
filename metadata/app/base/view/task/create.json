@@ -1,0 +1,31 @@
+{
+  "label": "Создать задачу",
+  "description": "Представление создания задачи",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "project",
+      "orderNumber": 20
+    },
+    {
+      "name": "name",
+      "orderNumber": 30
+    },
+    {
+      "name": "description",
+      "orderNumber": 40
+    },
+    {
+      "name": "priority",
+      "orderNumber": 50
+    },
+    {
+      "name": "executor",
+      "orderNumber": 60
+    },
+    {
+      "name": "author",
+      "orderNumber": 70
+    }
+  ]
+}

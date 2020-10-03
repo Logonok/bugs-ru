@@ -1,0 +1,463 @@
+{
+  "abstract": false,
+  "description": "Задание на устранение дефекта, найденного в проекте",
+  "header": ".name",
+  "label": "Задача",
+  "attrs": [
+    {
+      "name": "_state",
+      "label": "Состояние",
+      "type": "string",
+      "viewType": "state",
+      "description": "Служебный атрибут, который содержит состояние  объекта",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "project",
+      "label": "Проект",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Ссылка на проект",
+      "commands": [
+        "add",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "project",
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "name",
+      "label": "Название",
+      "type": "string",
+      "description": "Краткое описание дефекта",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": true,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "description",
+      "label": "Описание",
+      "type": "text",
+      "description": "Полное описание дефекта",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "priority",
+      "label": "Приоритет",
+      "type": "string",
+      "viewType": "radioList",
+      "description": "Важность дефекта",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "enums": [
+        {
+          "items": [
+            {
+              "value": "low",
+              "text": "Низкий",
+              "orderNumber": 10
+            },
+            {
+              "value": "average",
+              "text": "Средний",
+              "orderNumber": 20
+            },
+            {
+              "value": "high",
+              "text": "Высокий",
+              "orderNumber": 30
+            },
+            {
+              "value": "critical",
+              "text": "Критический",
+              "orderNumber": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "executor",
+      "label": "Исполнитель",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Ссылка на сотрудника, отвечающего за устранение дефекта",
+      "commands": [
+        "add",
+        "remove",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 60,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "employee",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "author",
+      "label": "Автор",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Ссылка на сотрудника, создавшего задачу.\nПо умолчанию выбирается сотрудник связанный с системным пользователем.",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.employee",
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 70,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "employee",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "_createdAt",
+      "label": "Дата создания",
+      "type": "date",
+      "viewType": "localDatetime",
+      "description": "Служебный атрибут, который содержит дату создания объекта. \nПредставление даты создания - это локальная дата, потому что оно зависит от часового пояса клиента, просматривающего дату.",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 80,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "documents",
+      "label": "Документы",
+      "type": "ref",
+      "description": "Ссылки на документы хранятся в задаче. \nТаким образом один и тот же документ может быть связан с разными задачами.",
+      "commands": [
+        "add",
+        "remove",
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "documents",
+      "hidden": false,
+      "history": false,
+      "multiple": true,
+      "onDelete": "null",
+      "orderNumber": 90,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "document",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "options": {
+        "css": "no-label"
+      }
+    },
+    {
+      "name": "comments",
+      "label": "Комментарии",
+      "type": "backref",
+      "description": "Список комментариев, относящихся к задаче.",
+      "commands": [
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": true,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "comments",
+      "hidden": false,
+      "history": false,
+      "listView": "listInTask",
+      "multiple": true,
+      "orderNumber": 100,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "task",
+      "refClass": "comment",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "options": {
+        "css": "no-label"
+      }
+    },
+    {
+      "name": "works",
+      "label": "Журнал работ",
+      "type": "backref",
+      "description": "Список работ, относящихся к задаче",
+      "commands": [
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": true,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "works",
+      "hidden": false,
+      "history": false,
+      "listView": "listInTask",
+      "multiple": true,
+      "orderNumber": 110,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "task",
+      "refClass": "work",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "options": {
+        "css": "no-label"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "tabs",
+      "label": "Вкладки",
+      "orderNumber": 1000,
+      "readOnly": false,
+      "required": false,
+      "type": "tabs"
+    },
+    {
+      "active": true,
+      "name": "documents",
+      "label": "Документы",
+      "orderNumber": 1010,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    },
+    {
+      "name": "comments",
+      "label": "Комментарии",
+      "orderNumber": 1020,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    },
+    {
+      "name": "works",
+      "label": "Журнал работ",
+      "orderNumber": 1030,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    }
+  ],
+  "states": [
+    {
+      "name": "new",
+      "label": "Новое",
+      "defaults": true,
+      "description": "Задача ожидает решения",
+      "readOnly": false
+    },
+    {
+      "name": "inProgress",
+      "label": "В процессе решения",
+      "defaults": false,
+      "description": "Задача находится  в процессе решения",
+      "readOnly": false
+    },
+    {
+      "name": "done",
+      "label": "Сделано",
+      "defaults": false,
+      "description": "Задача решена, но не проверена",
+      "readOnly": false
+    },
+    {
+      "name": "closed",
+      "label": "Закрыто",
+      "defaults": false,
+      "description": "Задача решена и проверена",
+      "readOnly": true
+    }
+  ],
+  "transitions": [
+    {
+      "name": "start",
+      "label": "Начать работу",
+      "description": "Необходимое условие начала работы - наличие исполнителя у задачи",
+      "hint": "Начать работу над задачей",
+      "nullStartState": false,
+      "startStates": [
+        "new",
+        "done"
+      ],
+      "finalState": "inProgress",
+      "condition": [
+        "NOT EMPTY",
+        "executor"
+      ],
+      "orderNumber": 10
+    },
+    {
+      "name": "complete",
+      "label": "Завершить",
+      "hint": "Задача решена исполнителем",
+      "nullStartState": false,
+      "startStates": [
+        "inProgress"
+      ],
+      "finalState": "done",
+      "orderNumber": 20
+    },
+    {
+      "name": "stop",
+      "label": "Остановить работу",
+      "hint": "Остановить работу над задачей",
+      "nullStartState": false,
+      "startStates": [
+        "inProgress"
+      ],
+      "finalState": "new",
+      "orderNumber": 30
+    },
+    {
+      "name": "reject",
+      "label": "Отклонить решение",
+      "hint": "Проверка не пройдена",
+      "nullStartState": false,
+      "startStates": [
+        "done"
+      ],
+      "finalState": "new",
+      "orderNumber": 40
+    },
+    {
+      "name": "close",
+      "label": "Закрыть",
+      "hint": "Устранение дефекта проверено",
+      "nullStartState": false,
+      "startStates": [
+        "done"
+      ],
+      "finalState": "closed",
+      "orderNumber": 50
+    },
+    {
+      "name": "reopen",
+      "label": "Переоткрыть",
+      "hint": "Вернуть задачу в работу",
+      "nullStartState": false,
+      "startStates": [
+        "closed"
+      ],
+      "finalState": "new",
+      "orderNumber": 60
+    }
+  ]
+}

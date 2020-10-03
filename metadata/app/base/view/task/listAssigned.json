@@ -1,0 +1,36 @@
+{
+  "label": "Список назначенных мне задач",
+  "description": "Представление назначенных мне задач в списке",
+  "filter": {
+    "executor": "$user.meta.base.employee"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "_state",
+      "orderNumber": 10
+    },
+    {
+      "name": "project",
+      "eagerLoading": true,
+      "orderNumber": 20
+    },
+    {
+      "name": "name",
+      "orderNumber": 30
+    },
+    {
+      "name": "priority",
+      "orderNumber": 50
+    },
+    {
+      "name": "author",
+      "eagerLoading": true,
+      "orderNumber": 70
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 80
+    }
+  ]
+}

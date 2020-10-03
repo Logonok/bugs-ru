@@ -1,0 +1,90 @@
+{
+  "abstract": false,
+  "description": "Комментарий к задаче",
+  "label": "Комментарий",
+  "attrs": [
+    {
+      "name": "task",
+      "label": "Задача",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Ссылка на задачу",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "task",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "text",
+      "label": "Текст",
+      "type": "text",
+      "description": "Содержание комментария",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "string",
+          "orderNumber": 10,
+          "max": 2048
+        }
+      ]
+    },
+    {
+      "name": "author",
+      "label": "Автор",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Ссылка на сотрудника, создавшего комментарий. \nПо умолчанию выбирается сотрудник связанный с системным пользователем.",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.employee",
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "employee",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    }
+  ]
+}

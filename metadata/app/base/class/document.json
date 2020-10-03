@@ -1,0 +1,95 @@
+{
+  "abstract": false,
+  "description": "Файловый документ, прилагаемый к задаче",
+  "header": ".name",
+  "label": "Документ",
+  "attrs": [
+    {
+      "name": "file",
+      "label": "Файл",
+      "type": "file",
+      "description": "Ссылка на файл в хранилище",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "name",
+      "label": "Название",
+      "type": "string",
+      "description": "Название документа",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": true,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "string",
+          "orderNumber": 10,
+          "max": 1024
+        }
+      ]
+    },
+    {
+      "name": "description",
+      "label": "Описание",
+      "type": "text",
+      "description": "Описание документа",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "string",
+          "orderNumber": 10,
+          "max": 1024
+        }
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "type": "file",
+      "orderNumber": 10,
+      "description": "Поведение определяющее работу с файловым хранилищем",
+      "imageOnly": false,
+      "maxSize": 10000000,
+      "nameAttr": "name"
+    }
+  ]
+}

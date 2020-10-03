@@ -1,0 +1,18 @@
+{
+  "label": "Мой сотрудник",
+  "description": "Представление моего сотрудника в списке",
+  "filter": {
+    "user": "$user"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "user",
+      "orderNumber": 20
+    }
+  ]
+}

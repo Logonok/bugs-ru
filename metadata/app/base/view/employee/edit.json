@@ -1,0 +1,29 @@
+{
+  "label": "Сотрудник",
+  "description": "Представление по умолчанию для редактирования сотрудника",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "user",
+      "eagerLoading": true,
+      "orderNumber": 10,
+      "readOnly": true
+    },
+    {
+      "name": "name",
+      "orderNumber": 20
+    },
+    {
+      "name": "assignedTasks",
+      "orderNumber": 30
+    },
+    {
+      "name": "createdTasks",
+      "orderNumber": 30
+    },
+    {
+      "name": "works",
+      "orderNumber": 40
+    }
+  ]
+}

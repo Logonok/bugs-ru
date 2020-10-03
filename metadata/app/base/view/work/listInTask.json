@@ -1,0 +1,19 @@
+{
+  "label": "Список в задаче",
+  "description": "Представления списка работ в задаче",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "author",
+      "orderNumber": 20
+    },
+    {
+      "name": "description",
+      "orderNumber": 30
+    },
+    {
+      "name": "duration",
+      "orderNumber": 40
+    }
+  ]
+}

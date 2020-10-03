@@ -1,0 +1,16 @@
+{
+  "label": "Создание сотрудник",
+  "description": "Представление создания сотрудника",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "user",
+      "eagerLoading": true,
+      "orderNumber": 10
+    },
+    {
+      "name": "name",
+      "orderNumber": 20
+    }
+  ]
+}

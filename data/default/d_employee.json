@@ -1,0 +1,40 @@
+[
+  {
+    "_id": {
+      "$oid": "5f6e9c5a7f906a10a8f45e17"
+    },
+    "_class": "employee",
+    "_creator": {
+      "$oid": "5f56d7618ac98f19c85ac536"
+    },
+    "user": {
+      "$oid": "5f56d7618ac98f19c85ac538"
+    },
+    "name": "Боб",
+    "_createdAt": {
+      "$date": "2020-09-26T01:41:46.990Z"
+    },
+    "_editor": {
+      "$oid": "5f56d7618ac98f19c85ac536"
+    },
+    "_updatedAt": {
+      "$date": "2020-09-26T01:43:15.935Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f6e9cad7f906a10a8f45e18"
+    },
+    "_class": "employee",
+    "_creator": {
+      "$oid": "5f56d7618ac98f19c85ac536"
+    },
+    "user": {
+      "$oid": "5f56e1ee9bce881d94a560d1"
+    },
+    "name": "Сара",
+    "_createdAt": {
+      "$date": "2020-09-26T01:43:09.791Z"
+    }
+  }
+]

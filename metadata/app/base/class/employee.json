@@ -1,0 +1,184 @@
+{
+  "abstract": false,
+  "description": "Сотрудник команды",
+  "header": ".name",
+  "label": "Сотрудник",
+  "attrs": [
+    {
+      "name": "user",
+      "label": "Пользователь",
+      "type": "user",
+      "description": "Ссылка на системного пользователя",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user",
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": true
+    },
+    {
+      "name": "name",
+      "label": "Имя",
+      "type": "string",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": true,
+      "trim": true,
+      "unique": true
+    },
+    {
+      "name": "assignedTasks",
+      "label": "Назначенные задачи",
+      "type": "backref",
+      "description": "Список задач, где сотрудник является исполнителем",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "assignedTasks",
+      "hidden": false,
+      "history": false,
+      "multiple": true,
+      "options": {
+        "css": "no-label",
+        "relation": {
+          "showTop": true
+        }
+      },
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "executor",
+      "refClass": "task",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "createdTasks",
+      "label": "Созданные задачи",
+      "type": "backref",
+      "description": "Список задач созданных сотрудником",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "createdTasks",
+      "hidden": false,
+      "history": false,
+      "multiple": true,
+      "options": {
+        "css": "no-label",
+        "relation": {
+          "showTop": true
+        }
+      },
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "author",
+      "refClass": "task",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "works",
+      "label": "Журнал работ",
+      "type": "backref",
+      "description": "Список работ сотрудника",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "works",
+      "hidden": false,
+      "history": false,
+      "multiple": true,
+      "options": {
+        "css": "no-label",
+        "relation": {
+          "showTop": true
+        }
+      },
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "author",
+      "refClass": "work",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    }
+  ],
+  "groups": [
+    {
+      "name": "tabs",
+      "label": "Вкладки",
+      "orderNumber": 1000,
+      "readOnly": false,
+      "required": false,
+      "type": "tabs"
+    },
+    {
+      "active": true,
+      "name": "assignedTasks",
+      "label": "Назначенные задачи",
+      "orderNumber": 1010,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    },
+    {
+      "name": "createdTasks",
+      "label": "Созданные задачи",
+      "orderNumber": 1020,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    },
+    {
+      "name": "works",
+      "label": "Журнал работ",
+      "orderNumber": 1030,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    }
+  ]
+}
