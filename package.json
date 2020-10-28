@@ -1,7 +1,7 @@
 {
   "name": "bugs-ru",
   "version": "1.0.0",
-  "description": "Bug Tracking System",
+  "description": "Bug Tracking System based on Evado Declarative Framework",
   "author": "Logonok",
   "license": "MIT",
   "engines": {

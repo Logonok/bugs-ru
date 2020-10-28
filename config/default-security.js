@@ -121,7 +121,7 @@ module.exports = {
             description: 'Доступ к модулю Офис'
         },
         'moduleStudio': {
-            label: 'Мудуль Студия',
+            label: 'Модуль Студия',
             description: 'Доступ к модулю Студия'
         },
         'moduleApiBaseUpload': {
