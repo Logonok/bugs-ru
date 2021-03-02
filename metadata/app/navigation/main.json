@@ -27,38 +27,41 @@
       "view": "listMy"
     },
     {
+      "name": "divider1",
+      "orderNumber": 40,
+      "type": "divider"
+    },
+    {
       "name": "newTasks",
       "label": "Новые задачи",
       "description": "Список новых задач",
-      "orderNumber": 40,
+      "orderNumber": 50,
       "class": "task",
-      "view": "listNew",
-      "options": {
-        "separatorBefore": true
-      }
+      "view": "listNew"
     },
     {
       "name": "tasks",
       "label": "Задачи",
       "description": "Список всех задач",
-      "orderNumber": 50,
+      "orderNumber": 60,
       "class": "task"
+    },
+    {
+      "name": "divider2",
+      "orderNumber": 70
     },
     {
       "name": "projects",
       "label": "Проекты",
       "description": "Список проектов",
-      "orderNumber": 60,
-      "class": "project",
-      "options": {
-        "separatorBefore": true
-      }
+      "orderNumber": 80,
+      "class": "project"
     },
     {
       "name": "employees",
       "label": "Сотрудники",
       "description": "Список всех сотрудников",
-      "orderNumber": 70,
+      "orderNumber": 90,
       "class": "employee"
     }
   ]
