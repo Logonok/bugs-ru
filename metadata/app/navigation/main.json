@@ -48,7 +48,8 @@
     },
     {
       "name": "divider2",
-      "orderNumber": 70
+      "orderNumber": 70,
+      "type": "divider"
     },
     {
       "name": "projects",
