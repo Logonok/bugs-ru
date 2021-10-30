@@ -38,7 +38,7 @@ module.exports = {
             type: 'class',
             class: ['task', 'comment', 'work']
         },
-        rule: 'author'
+        rules: 'author'
     }, {
         description: 'Управлять собственными документами',
         roles: 'employee',
@@ -48,7 +48,7 @@ module.exports = {
             type: 'class',
             class: 'document'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Сотрудник не может изменять состояние задач',
         roles: 'employee',
@@ -76,7 +76,7 @@ module.exports = {
             type: 'transition',
             class: 'task'
         },
-        rule: 'author'
+        rules: 'author'
     }, {
         description: 'Исполнитель может изменять состояние задач назначенных ему',
         roles: 'executor',
@@ -86,7 +86,7 @@ module.exports = {
             type: 'transition',
             class: 'task'
         },
-        rule: 'executor'
+        rules: 'executor'
     }, {
         description: 'Менеджер не может начинать, останавливать и завершать работу над задачей',
         roles: 'manager',
