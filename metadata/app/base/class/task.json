@@ -15,6 +15,7 @@
       "eagerLoading": false,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "orderNumber": 10,
@@ -23,6 +24,7 @@
       "readOnly": true,
       "required": false,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
       "unique": false
     },
@@ -41,6 +43,7 @@
       "eagerLoading": true,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "onDelete": "cascade",
@@ -51,6 +54,7 @@
       "readOnly": false,
       "required": true,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
       "unique": false
     },
@@ -64,6 +68,7 @@
       "eagerLoading": false,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "orderNumber": 30,
@@ -72,6 +77,7 @@
       "readOnly": false,
       "required": true,
       "selectSearchable": true,
+      "signed": false,
       "trim": true,
       "unique": false
     },
@@ -85,6 +91,7 @@
       "eagerLoading": false,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "orderNumber": 40,
@@ -93,6 +100,7 @@
       "readOnly": false,
       "required": true,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
       "unique": false
     },
@@ -107,6 +115,7 @@
       "eagerLoading": false,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "orderNumber": 50,
@@ -115,6 +124,7 @@
       "readOnly": false,
       "required": true,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
       "unique": false,
       "enums": [
@@ -160,6 +170,7 @@
       "eagerLoading": true,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "onDelete": "null",
@@ -170,6 +181,7 @@
       "readOnly": false,
       "required": false,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
       "unique": false
     },
@@ -188,6 +200,7 @@
       "eagerLoading": true,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "onDelete": "null",
@@ -198,6 +211,7 @@
       "readOnly": true,
       "required": true,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
       "unique": false
     },
@@ -212,6 +226,7 @@
       "eagerLoading": false,
       "escape": true,
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": false,
       "orderNumber": 80,
@@ -220,6 +235,7 @@
       "readOnly": true,
       "required": false,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
       "unique": false
     },
@@ -240,9 +256,13 @@
       "escape": true,
       "group": "documents",
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "multiple": true,
       "onDelete": "null",
+      "options": {
+        "css": "no-label"
+      },
       "orderNumber": 90,
       "sortable": false,
       "sortableRelation": false,
@@ -250,11 +270,9 @@
       "readOnly": false,
       "required": false,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
-      "unique": false,
-      "options": {
-        "css": "no-label"
-      }
+      "unique": false
     },
     {
       "name": "comments",
@@ -271,9 +289,13 @@
       "escape": true,
       "group": "comments",
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "listView": "listInTask",
       "multiple": true,
+      "options": {
+        "css": "no-label"
+      },
       "orderNumber": 100,
       "sortable": false,
       "sortableRelation": false,
@@ -282,11 +304,9 @@
       "readOnly": false,
       "required": false,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
-      "unique": false,
-      "options": {
-        "css": "no-label"
-      }
+      "unique": false
     },
     {
       "name": "works",
@@ -303,9 +323,13 @@
       "escape": true,
       "group": "works",
       "hidden": false,
+      "hideEmpty": false,
       "history": false,
       "listView": "listInTask",
       "multiple": true,
+      "options": {
+        "css": "no-label"
+      },
       "orderNumber": 110,
       "sortable": false,
       "sortableRelation": false,
@@ -314,17 +338,16 @@
       "readOnly": false,
       "required": false,
       "selectSearchable": false,
+      "signed": false,
       "trim": true,
-      "unique": false,
-      "options": {
-        "css": "no-label"
-      }
+      "unique": false
     }
   ],
   "groups": [
     {
       "name": "tabs",
       "label": "Вкладки",
+      "loadable": false,
       "orderNumber": 1000,
       "readOnly": false,
       "required": false,
@@ -334,6 +357,7 @@
       "active": true,
       "name": "documents",
       "label": "Документы",
+      "loadable": false,
       "orderNumber": 1010,
       "parent": "tabs",
       "readOnly": false,
@@ -342,6 +366,7 @@
     {
       "name": "comments",
       "label": "Комментарии",
+      "loadable": false,
       "orderNumber": 1020,
       "parent": "tabs",
       "readOnly": false,
@@ -350,6 +375,7 @@
     {
       "name": "works",
       "label": "Журнал работ",
+      "loadable": false,
       "orderNumber": 1030,
       "parent": "tabs",
       "readOnly": false,
@@ -399,8 +425,8 @@
       ],
       "finalState": "inProgress",
       "condition": [
-        "NOT EMPTY",
-        "executor"
+        "$notEmpty",
+        ".executor"
       ],
       "orderNumber": 10
     },
