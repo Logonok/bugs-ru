@@ -29,7 +29,7 @@
 - [MongoDB](https://www.mongodb.com/download-center/community) (версия 4)
 
 #### Linux
-Клонируйте приложение в /app
+Клонируйте приложение в `/app`
 ```sh
 cd /app
 npm install
@@ -38,7 +38,7 @@ NODE_ENV=development node console/start
 ```
 
 #### Windows
-Клонируйте приложение в c:/app
+Клонируйте приложение в `c:/app`
 ```sh
 cd c:/app
 npm install
@@ -49,7 +49,7 @@ node console/start
 
 ## Установка через Docker
 
-Клонируйте приложение в /app
+Клонируйте приложение в `/app`
 ```sh
 cd /app
 docker-compose up -d mongo
